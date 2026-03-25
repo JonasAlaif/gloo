@@ -1,9 +1,9 @@
 [package]
 name = "gloo-net"
-version = "0.5.0"
+version = "0.6.0"
 authors = [
     "Rust and WebAssembly Working Group",
-    "Muhammad Hamza <muhammadhamza1311@gmail.com>",
+    "Elina <imelina@elina.website>",
 ]
 edition = "2021"
 license = "MIT OR Apache-2.0"
@@ -36,7 +36,7 @@ serde_json = { version = "1.0", optional = true }
 
 futures-channel = { version = "0.3", optional = true }
 pin-project = { version = "1.0", optional = true }
-http = "0.2.9"
+http = "1.0"
 
 [dev-dependencies]
 wasm-bindgen-test = "0.3"
@@ -78,7 +78,6 @@ http = [
     'web-sys/Response',
     'web-sys/ResponseInit',
     'web-sys/ResponseType',
-    'web-sys/Window',
     'web-sys/RequestCache',
     'web-sys/RequestCredentials',
     'web-sys/ObserverCallback',
@@ -88,7 +87,6 @@ http = [
     'web-sys/ReadableStream',
     'web-sys/Blob',
     'web-sys/FormData',
-    'web-sys/WorkerGlobalScope',
 ]
 # Enables the EventSource API
 eventsource = [
@@ -98,7 +96,10 @@ eventsource = [
     'web-sys/Event',
     'web-sys/EventTarget',
     'web-sys/EventSource',
+    'web-sys/EventSourceInit',
     'web-sys/MessageEvent',
 ]
 # As of now, only implements `AsyncRead` and `AsyncWrite` on `WebSocket`
 io-util = ["futures-io"]
+# For test runner only. Enables browser tests.
+browser-test = []

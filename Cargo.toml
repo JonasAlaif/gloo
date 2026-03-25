@@ -23,7 +23,7 @@ gloo-console = { version = "0.3", path = "crates/console", optional = true }
 gloo-utils = { version = "0.2", path = "crates/utils", optional = true }
 gloo-history = { version = "0.2", path = "crates/history", optional = true }
 gloo-worker = { version = "0.5", path = "crates/worker", optional = true }
-gloo-net = { version = "0.5", path = "crates/net", optional = true }
+gloo-net = { version = "0.6", path = "crates/net", optional = true }
 
 [features]
 default = [
@@ -72,7 +72,6 @@ members = [
     "crates/history",
     "crates/worker",
     "crates/worker-macros",
-    "crates/net",
 
     "examples/markdown",
     "examples/clock",
