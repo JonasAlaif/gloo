@@ -69,9 +69,7 @@ where
                             // sent twice, this will always be `Some`.
                             if let Some(pending_queue) = bridge_inner.take_queue() {
                                 // Will be `None` if the worker has been terminated.
-                                if let Some(worker) =
-                                    bridge_inner.native_worker.borrow().as_ref()
-                                {
+                                if let Some(worker) = bridge_inner.native_worker.borrow().as_ref() {
                                     // Send all pending messages.
                                     for to_worker in pending_queue.into_iter() {
                                         (bridge_inner.post_msg)(worker, to_worker);
