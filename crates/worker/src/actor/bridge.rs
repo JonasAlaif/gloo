@@ -70,7 +70,7 @@ where
                             if let Some(pending_queue) = bridge_inner.take_queue() {
                                 // Will be `None` if the worker has been terminated.
                                 if let Some(worker) =
-                                    bridge_inner.native_worker.borrow_mut().as_ref()
+                                    bridge_inner.native_worker.borrow().as_ref()
                                 {
                                     // Send all pending messages.
                                     for to_worker in pending_queue.into_iter() {
