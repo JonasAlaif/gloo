@@ -107,6 +107,10 @@
 
 ## `history`
 
+### Version 0.2.2
+
+- Remove the flags what to expect WASI targets (#425)
+
 ### Version 0.2.1
 
 - Fixed an issue where history state might collide with a stated assigned later
@@ -150,6 +154,10 @@
 - Hash-based History type & Unified Location. (#177)
 
 ## `net`
+
+### Version "0.6.0"
+
+- Update http crate to 1.0 (#407)
 
 ### Version "0.5.0"
 
